@@ -91,9 +91,15 @@ app.controller("rate", $scope => {
     var l = 0;
     var m = 0;
     var n = 0;
+    var o = 0;
     while (i < 99) {
-      if (j < 5) {
+      if (o < 1) {
         r = rate(0, 3);
+        $scope.lst.push($scope.l[r]);
+        o++;
+      }
+      if (j < 5) {
+        r = rate(0, 10);
         $scope.lst.push($scope.m[r]);
         j++;
       } else if (k < 5) {
@@ -108,7 +114,7 @@ app.controller("rate", $scope => {
         r = rate(0, 13);
         $scope.lst.push($scope.d[r]);
         m++;
-      } else if (n < 45) {
+      } else if (n < 44) {
         r = rate(0, 20);
         $scope.lst.push($scope.n[r]);
         n++;
