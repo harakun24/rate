@@ -1,6 +1,50 @@
 <html>
   <head>
     <script src="./angular.js"></script>
+    <script src="./app.js"></script>
+    <style>
+      .bbox{
+        border:1px solid black;
+        width: 40%;
+        float:left;
+        height: 50px;
+        overflow: scroll;
+        margin-left: 5px;
+        margin-top: 5px;
+      }
+      .bbox h4{
+        float: left;
+        margin-left: 5px;
+      }
+      .gh {
+        height: 200px;
+      }
+    </style>
   </head>
-  <body></body>
+  <body ng-app="app" ng-controller="rate">
+    <h1>{{title}}</h1>
+    <div class="bbox">
+        <h4 ng-repeat="list in l">{{list}}</h4>
+    </div>
+    <div class="bbox">
+        <h4 ng-repeat="list in m">{{list}}</h4>
+    </div>
+    <div class="bbox">
+        <h4 ng-repeat="list in e">{{list}}</h4>
+    </div>
+    <div class="bbox">
+        <h4 ng-repeat="list in r">{{list}}</h4>
+    </div>
+    <div class="bbox">
+        <h4 ng-repeat="list in d">{{list}}</h4>
+    </div>
+    <div class="bbox">
+        <h4 ng-repeat="list in n">{{list}}</h4>
+    </div>
+        
+    <h4>{{lst}}</h4>
+    <button ng-click="random()">summon</button>
+    <p>{{selected}}</p>
+    
+  </body>
 </html>
