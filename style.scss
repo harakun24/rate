@@ -1,0 +1,29 @@
+.bbox {
+  border: 1px solid black;
+  width: 40%;
+  float: left;
+  height: 50px;
+  overflow: scroll;
+  margin-left: 5px;
+  margin-top: 5px;
+  h4 {
+    float: left;
+    margin-left: 5px;
+  }
+}
+.gh {
+  height: 200px;
+}
+.modal-body {
+  display: flex;
+  justify-content: center;
+}
+.modal-header,
+.modal-footer {
+  text-align: center;
+}
+.imger {
+  height: 262px;
+  width: 326px;
+  background: blue;
+}
