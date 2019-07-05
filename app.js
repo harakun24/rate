@@ -2,6 +2,7 @@ let app = angular.module("app", []);
 app.controller("rate", $scope => {
   $scope.title = "simulasi summon";
   $scope.selected = "";
+  $scope.str = 0;
   $scope.back = "transparent";
   $scope.l = ["l/newgate", "l/reyleigh", "l/shiki"];
   $scope.m = [
@@ -127,33 +128,39 @@ app.controller("rate", $scope => {
     switch (res[0]) {
       case "m":
         $scope.back = "purple";
-        $scope.status = "SSR";
+        $scope.status = "UR";
         $scope.chance = rate(85, 12);
+        $scope.str = [1, 2, 3, 4];
         break;
       case "l":
         $scope.back = "yellow";
-        $scope.status = "UR";
+        $scope.status = "LR";
         $scope.chance = rate(99, 2);
+        $scope.str = [1, 2, 3, 4, 5];
         break;
       case "n":
         $scope.back = "green";
         $scope.status = "NORMAL";
         $scope.chance = rate(0, 31);
+        $scope.str = [1];
         break;
       case "r":
         $scope.back = "red";
         $scope.status = "R";
         $scope.chance = rate(70, 12);
+        $scope.str = [1, 2];
         break;
       case "e":
         $scope.back = "orange";
-        $scope.status = "SR";
+        $scope.status = "SSR";
         $scope.chance = rate(80, 12);
+        $scope.str = [1, 2, 3];
         break;
       case "d":
         $scope.back = "blue";
-        $scope.status = "SR";
+        $scope.status = "SSR";
         $scope.chance = rate(75, 12);
+        $scope.str = [1, 2, 3];
         break;
     }
   };

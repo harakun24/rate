@@ -3,16 +3,19 @@
     <link rel="stylesheet" href="bootstrap.css" />
     <script src="./jquery.js"></script>
     <script src="./bootstrap.js"></script>
+    <script src="./angular.js"></script>
+    <script src="./app.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body ng-app="app" ng-controller="rate">
     <button
       type="button"
-      class="btn btn-primary"
+      class="btn btn-primary ez"
       data-toggle="modal"
       data-target="#myModal"
+      ng-click="random()"
     >
-      Open modal
+      summon
     </button>
 
     <!-- The Modal -->
@@ -21,18 +24,32 @@
         <div class="modal-content">
           <!-- Modal Header -->
           <div class="modal-header">
-            <h4 class="modal-title">Modal Heading</h4>
-            <button type="button" class="close" data-dismiss="modal">
-              &times;
-            </button>
+            <h4 class="modal-title">
+              {{ status }}
+            </h4>
+            <div class="ee">
+              <div class="str" ng-repeat="list in str">
+                <img src="./char/star.svg" alt="" />
+              </div>
+            </div>
+
+            <h5>
+              <i>{{ chance }}</i> point
+            </h5>
           </div>
 
           <!-- Modal body -->
           <div class="modal-body">
-            <div class="imger"></div>
+            <div class="imger">
+              <img
+                src="./char/{{ selected }}.png"
+                alt=""
+                style="border: 6px solid {{ back }};float: left;width:100%"
+              />
+            </div>
           </div>
 
-          <div class="modal-footer">
+          <div class="modal-footer" style="justify-content: center">
             <h2>Name</h2>
           </div>
         </div>

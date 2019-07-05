@@ -18,12 +18,29 @@
   display: flex;
   justify-content: center;
 }
-.modal-header,
-.modal-footer {
-  text-align: center;
-}
 .imger {
   height: 262px;
   width: 326px;
-  background: blue;
+}
+.modal-header {
+  flex-direction: column;
+}
+.str {
+  width: 20px;
+  height: 20px;
+  float: left;
+  img {
+    width: 100%;
+  }
+}
+.modal-title {
+  float: left;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ee {
+  display: flex;
 }
