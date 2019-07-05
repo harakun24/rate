@@ -2,10 +2,18 @@
   <head>
     <script src="./angular.js"></script>
     <script src="./app.js"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body ng-app="app">
-    <div ng-controller="home">
-      <h1>{{ header }}</h1>
-    </div>
+  <body ng-app="app" ng-controller="rate">
+    <h1>{{ title }}</h1>
+    <button ng-click="random()">summon</button>
+    <br />
+    <img
+      src="./char/{{ selected }}.png"
+      alt=""
+      style="border: 6px solid {{ back }};float: left;"
+    />
+    <h1>{{ status }}</h1>
+    <h3>luck : {{ chance }} point</h3>
   </body>
 </html>
